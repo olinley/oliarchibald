@@ -3,7 +3,7 @@
    =================== #}
 
 {% macro label( text, name ) %}
-  <label class="question__label" for="field-{{ name }}">{{ text }}</label>
+  <label class="question__label" for="field-{{ name }}">{{ text | widont }}</label>
 {% endmacro %}
 
 {% macro field( type, name, data ) %}
@@ -23,7 +23,7 @@
         >
   {% if data.description %}
     <br>
-    {{ description( name, data.description ) }}
+    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -41,7 +41,7 @@
   </label>
   {% if data.description %}
     <br>
-    {{ description( name, data.description ) }}
+    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -53,27 +53,19 @@
           {% if data.multiple %}multiple{% endif %}
           {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
           >
-    {% for opt in data.options_before %}
-      {{ option( opt ) }}
+    {% for option in data.options_before %}
+      <option>{{ option }}</option>
     {% endfor %}
-    {% for opt in options %}
-      {{ option( opt ) }}
+    {% for option in options %}
+      <option>{{ option }}</option>
     {% endfor %}
-    {% for opt in data.options_after %}
-      {{ option( opt ) }}
+    {% for option in data.options_after %}
+      <option>{{ option }}</option>
     {% endfor %}
   </select>
   {% if data.description %}
     <br>
-    {{ description( name, data.description ) }}
-  {% endif %}
-{% endmacro %}
-
-{% macro option( data ) %}
-  {% if data.value %}
-    <option value="{{ data.value }}">{{ data.label }}</option>
-  {% else %}
-    <option>{{ data }}</option>
+    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
@@ -81,7 +73,7 @@
   <br>
   <textarea id="field-{{ name }}"
             name="{{ name }}"
-            {% if data.rows %}rows="{{ data.rows }}"{% else %}rows="5"{% endif %}
+            {% if data.rows %}rows="{{ data.rows }}"{% else %}rows="10"{% endif %}
             cols="100"
             {% if data.required %}required aria-required="true"{% endif %}
             {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
@@ -90,16 +82,14 @@
             {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
             ></textarea>
   {% if data.description %}
-    {{ description( name, data.description ) }}
+    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
   {% endif %}
 {% endmacro %}
 
-{% macro radios( label, name, options, data ) %}
+{% macro radios( label, name, options ) %}
   <fieldset>
-    <legend
-      {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
-      >{{ label }}</legend>
-    <ul class="field-list__field-group__list">
+    <legend>{{ label }}</legend>
+    <ul class="question__list">
       {% for option in options %}
         <li>
           {% if option.value %}
@@ -120,23 +110,21 @@
           {% endif %}
           {% if option.note %}
             <br>
-            {{ description( ( name + '-' + option.value ), option.note ) }}
+            <em class="question__description" id="description-{{ name }}-{{ option.value }}">{{ option.note | widont }}</em>
           {% endif %}
         </li>
       {% endfor %}
     </ul>
     {% if data.description %}
-      {{ description( name, data.description ) }}
+      <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
     {% endif %}
   </fieldset>
 {% endmacro %}
 
-{% macro checkboxes( label, name, options, data ) %}
+{% macro checkboxes( label, name, options ) %}
   <fieldset>
-    <legend
-      {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
-      >{{ label }}</legend>
-    <ul class="field-list__field-group__list">
+    <legend>{{ label }}</legend>
+    <ul class="question__list">
       {% for option in options %}
         <li>
           {% if option.value %}
@@ -157,25 +145,17 @@
           {% endif %}
           {% if option.note %}
             <br>
-            {{ description( ( name + '-' + option.value ), option.note ) }}
+            <em class="question__description" id="description-{{ name }}-{{ option.value }}">{{ option.note | widont }}</em>
           {% endif %}
         </li>
       {% endfor %}
     </ul>
     {% if data.description %}
-      {{ description( name, data.description ) }}
+      <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
     {% endif %}
   </fieldset>
-{% endmacro %}
-
-{% macro description( id, html ) %}
-  <em class="[ field-list__field-group__description ]" id="description-{{ id }}">{{ html | safe }}</em>
-{% endmacro %}
-
-{% macro hidden_field( name, value ) %}
-  <input type="hidden" name="{{ name }}" id="field-{{ name }}" value="{{ value }}">
 {% endmacro %}
 
 {% macro button( text ) %}
-  <button type="submit" class="[ button ] [ text-base weight-bold ]">{{ text }}</button>
+  <button type="submit" class="button">{{ text }}</button>
 {% endmacro %}
