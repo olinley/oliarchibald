@@ -8,7 +8,7 @@ Hylia is a lightweight [Eleventy](https://11ty.io) starter kit with [Forestry CM
 
 ## Features
 
-Hylia version 0.5.1 features:
+Hylia version 0.6.0 features:
 
 ✍️ A pre-configured [Forestry CMS](https://forestry.io/) setup
 🎨 Customisable design tokens to make it your own
