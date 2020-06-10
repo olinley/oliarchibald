@@ -23,7 +23,7 @@ sections:
   label: Templates
   create: documents
   match: "*.njk"
-  new_doc_ext: ".njk"
+  new_doc_ext: njk
 - type: heading
   label: Globals
 - type: document
