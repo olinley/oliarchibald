@@ -24,6 +24,8 @@ sections:
   create: documents
   match: "*.njk"
   new_doc_ext: njk
+  templates:
+  - nunchucks-template
 - type: heading
   label: Globals
 - type: document
