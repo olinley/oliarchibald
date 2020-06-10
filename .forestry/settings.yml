@@ -11,9 +11,6 @@ sections:
   match: "*.md"
   templates:
   - post
-- type: document
-  path: src/index.md
-  label: Home
 - type: heading
   label: Content
 - type: directory
