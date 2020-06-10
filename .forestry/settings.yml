@@ -21,11 +21,9 @@ sections:
 - type: directory
   path: src
   label: Templates
-  create: documents
+  create: none
   match: "*.njk"
   new_doc_ext: njk
-  templates:
-  - nunchucks-template
 - type: heading
   label: Globals
 - type: document
