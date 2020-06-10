@@ -7,8 +7,10 @@ sections:
 - type: directory
   path: src
   label: Pages
-  create: documents
+  create: none
   match: "*.md"
+  templates:
+  - post
 - type: heading
   label: Content
 - type: directory
