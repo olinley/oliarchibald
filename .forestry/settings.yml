@@ -7,8 +7,9 @@ sections:
 - type: directory
   path: src
   label: Pages
-  create: documents
-  match: "*.md"
+  create: all
+  match: "**/*.md"
+  exclude: posts
   templates:
   - post
 - type: heading
