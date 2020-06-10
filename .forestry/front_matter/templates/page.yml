@@ -20,3 +20,4 @@ fields:
   label: layout
 pages:
 - src/pages/contact.md
+- src/pages/thank-you.md
