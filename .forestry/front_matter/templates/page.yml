@@ -16,7 +16,7 @@ fields:
 - name: layout
   type: text
   config:
-    required: true
+    required: false
   label: layout
 pages:
 - src/pages/contact.md
