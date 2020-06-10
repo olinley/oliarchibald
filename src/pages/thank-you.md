@@ -4,4 +4,4 @@ permalink: "/thank-you/index.html"
 layout: ''
 
 ---
-Thanks!
+Thanks for your message!
