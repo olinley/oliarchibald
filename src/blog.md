@@ -1,5 +1,5 @@
 ---
 title: 'Blog'
 permalink: "/blog/index.html"
-layout: 'layouts/archive.njk'
+layout: 'layouts/blog.njk'
 ---
