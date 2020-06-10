@@ -4,11 +4,18 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: heading
-  label: Content
+- type: directory
+  path: src
+  label: Pages
+  create: documents
+  match: "*.md"
+  templates:
+  - post
 - type: document
   path: src/index.md
   label: Home
+- type: heading
+  label: Content
 - type: directory
   path: src/posts
   label: Posts
