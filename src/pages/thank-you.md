@@ -1,7 +1,7 @@
 ---
 title: Thank you
 permalink: "/thank-you/index.html"
-layout: 'layouts/home.njk'
+layout: 'layouts/page.njk'
 ---
 
 Thanks for your message!
