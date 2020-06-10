@@ -9,7 +9,6 @@ sections:
 - type: document
   path: src/index.md
   label: Home
-  match: "**/*"
 - type: heading
   label: Content
 - type: directory
@@ -19,6 +18,12 @@ sections:
   match: "*.md"
   templates:
   - post
+- type: directory
+  path: src
+  label: Templates
+  create: documents
+  match: "*.njk"
+  new_doc_ext: ".njk"
 - type: heading
   label: Globals
 - type: document
