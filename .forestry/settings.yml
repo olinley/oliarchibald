@@ -13,7 +13,7 @@ sections:
   create: documents
   match: "*.md"
   templates:
-  - post
+  - page
 - type: heading
   label: Content
 - type: directory
