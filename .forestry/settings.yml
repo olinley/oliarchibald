@@ -9,7 +9,7 @@ sections:
   label: Pages
   create: all
   match: "**/*.md"
-  exclude: posts
+  exclude: posts/*.md
   templates:
   - post
 - type: heading
