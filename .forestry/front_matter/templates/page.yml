@@ -21,4 +21,5 @@ fields:
 pages:
 - src/pages/about.md
 - src/pages/contact.md
+- src/pages/my-work.md
 - src/pages/thank-you.md
