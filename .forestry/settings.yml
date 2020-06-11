@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/_data/navigation.json
   label: Navigation
-  match: "**/*"
 - type: document
   path: src/_data/site.json
   label: Site settings
