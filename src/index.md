@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Oi oi!!!!!
+title: What's up ya'll!
 postsHeading: Latest posts
 archiveButtonText: See all posts
 socialImage: ''
