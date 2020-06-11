@@ -4,6 +4,12 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: src/_data/navigation.json
+  label: Navigation
+- type: document
+  path: src/_data/site.json
+  label: Site settings
 - type: heading
   label: Content
 - type: document
