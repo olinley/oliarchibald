@@ -14,6 +14,6 @@ Some of their greatest hits include:
 
 * Entry into position 0 answer boxes
 * AMP carousel (when Google gave carousel snippets for camera news)
-* And everybody's favourite... star ratings
+* And everybody's favourite... star rating snippets
 
 Chuffed to be considered an honourary member of their team!
