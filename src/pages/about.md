@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: "/about/index.html"
-layout: "/layouts/page.njk"
+layout: layouts/page.njk
 
 ---
 Hola, I'm Oli (not Ollie/Olly, etc.).
