@@ -19,5 +19,6 @@ fields:
     required: false
   label: layout
 pages:
+- src/pages/about.md
 - src/pages/contact.md
 - src/pages/thank-you.md
