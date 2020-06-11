@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Hello mate!
+title: Oi oi!!!!!
 postsHeading: Latest posts
 archiveButtonText: See all posts
 socialImage: ''
