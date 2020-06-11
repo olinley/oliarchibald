@@ -1,6 +1,6 @@
 ---
 layout: home
-title: What's up ya'll!
+title: Technical SEO and stuff
 postsHeading: Latest posts
 archiveButtonText: See all posts
 socialImage: ''
