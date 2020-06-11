@@ -23,6 +23,7 @@ body {
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
+  font-family: 'Barlow', sans-serif;
 }
 
 main {
@@ -36,7 +37,7 @@ hr {
   display: block;
   height: 1px;
   max-width: 500px;
-  background: var(--color-stroke);
+  background: rgb(67, 103, 131);
   border: none;
   margin: get-size(900) auto;
 }
