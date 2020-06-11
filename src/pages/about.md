@@ -4,7 +4,7 @@ permalink: "/about/index.html"
 layout: layouts/contact.njk
 
 ---
-Hola, I'm Oli (not Ollie/Olly, etc.).
+Hola, I'm ~~Ollie~~, ~~Olly~~, Oli.
 
 Been in the game for 10 years, having started my career at Builtvisible before going in-house at Deliveroo.
 
