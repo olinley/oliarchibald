@@ -23,8 +23,8 @@ sections:
   templates:
   - page
 - type: directory
-  path: src/blog
-  label: Blog
+  path: src/posts
+  label: Posts
   create: documents
   match: "*.md"
   templates:
