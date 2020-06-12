@@ -5,103 +5,103 @@
 //   font-weight: 700;
 //   font-display: swap;
 //   src: local('Lora Bold'), local('Lora-Bold'),
-//     url('/fonts/lora-v13-latin-700.woff2') format('woff2'),
-//     url('/fonts/lora-v13-latin-700.woff') format('woff');
+//     url('/fonts//fonts/lora-v13-latin-700.woff2') format('woff2'),
+//     url('/fonts//fonts/lora-v13-latin-700.woff') format('woff');
 // }
 
 // Barlow font
 @font-face {
   font-family: 'barlowblack';
-  src: url('barlow-black-webfont.woff2') format('woff2'),
-       url('barlow-black-webfont.woff') format('woff');
+  src: url('/fonts/barlow-black-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-black-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowblack_italic';
-  src: url('barlow-blackitalic-webfont.woff2') format('woff2'),
-       url('barlow-blackitalic-webfont.woff') format('woff');
+  src: url('/fonts/barlow-blackitalic-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-blackitalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowbold';
-  src: url('barlow-bold-webfont.woff2') format('woff2'),
-       url('barlow-bold-webfont.woff') format('woff');
+  src: url('/fonts/barlow-bold-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowbold_italic';
-  src: url('barlow-bolditalic-webfont.woff2') format('woff2'),
-       url('barlow-bolditalic-webfont.woff') format('woff');
+  src: url('/fonts/barlow-bolditalic-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-bolditalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowextrabold';
-  src: url('barlow-extrabold-webfont.woff2') format('woff2'),
-       url('barlow-extrabold-webfont.woff') format('woff');
+  src: url('/fonts/barlow-extrabold-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-extrabold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowextrabold_italic';
-  src: url('barlow-extrabolditalic-webfont.woff2') format('woff2'),
-       url('barlow-extrabolditalic-webfont.woff') format('woff');
+  src: url('/fonts/barlow-extrabolditalic-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-extrabolditalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowextralight';
-  src: url('barlow-extralight-webfont.woff2') format('woff2'),
-       url('barlow-extralight-webfont.woff') format('woff');
+  src: url('/fonts/barlow-extralight-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-extralight-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowextralight_italic';
-  src: url('barlow-extralightitalic-webfont.woff2') format('woff2'),
-       url('barlow-extralightitalic-webfont.woff') format('woff');
+  src: url('/fonts/barlow-extralightitalic-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-extralightitalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowitalic';
-  src: url('barlow-italic-webfont.woff2') format('woff2'),
-       url('barlow-italic-webfont.woff') format('woff');
+  src: url('/fonts/barlow-italic-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowlight';
-  src: url('barlow-light-webfont.woff2') format('woff2'),
-       url('barlow-light-webfont.woff') format('woff');
+  src: url('/fonts/barlow-light-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowlight_italic';
-  src: url('barlow-lightitalic-webfont.woff2') format('woff2'),
-       url('barlow-lightitalic-webfont.woff') format('woff');
+  src: url('/fonts/barlow-lightitalic-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-lightitalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'barlowmedium';
-  src: url('barlow-medium-webfont.woff2') format('woff2'),
-       url('barlow-medium-webfont.woff') format('woff');
+  src: url('/fonts/barlow-medium-webfont.woff2') format('woff2'),
+       url('/fonts/barlow-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -112,13 +112,13 @@ body {
   $line-height: get-size(600);
   line-height: $line-height / ($line-height * 0 + 1);
 
-  @include apply-utility('font', 'base');
+  @include apply-utility('font', 'serif');
 }
 
 h1,
 h2,
 h3 {
-  @include apply-utility('font', 'sans-serif');
+  @include apply-utility('font', 'serif');
 }
 
 h1 {
