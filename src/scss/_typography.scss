@@ -112,7 +112,7 @@ body {
   $line-height: get-size(600);
   line-height: $line-height / ($line-height * 0 + 1);
 
-  @include apply-utility('font', 'serif');
+  @include apply-utility('font', 'base');
 }
 
 h1,
