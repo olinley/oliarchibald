@@ -1,7 +1,7 @@
 ---
 title: My Work
 permalink: "/my-work/index.html"
-layout: ''
+layout: layouts/page.njk
 
 ---
 ## Camera Jabber
@@ -15,7 +15,5 @@ Some of their greatest hits include:
 * Entry into position 0 answer boxes
 * AMP carousel (when Google gave carousel snippets for camera news)
 * And everybody's favourite... star rating snippets
-
-![](/images/cj-star-ratings.PNG)
 
 Chuffed to be considered an honourary member of their team!
