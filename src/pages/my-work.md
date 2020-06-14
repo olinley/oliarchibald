@@ -1,7 +1,7 @@
 ---
 title: My Work
 permalink: "/my-work/index.html"
-layout: layouts/page.njk
+layout: layouts/post.njk
 
 ---
 ## Camera Jabber
