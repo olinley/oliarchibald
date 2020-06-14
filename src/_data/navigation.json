@@ -11,6 +11,11 @@
       "external": false
     },
     {
+      "text": "My Work",
+      "url": "/my-work",
+      "external": false
+    },
+    {
       "text": "Blog",
       "url": "/blog",
       "external": false
