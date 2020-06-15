@@ -7,22 +7,22 @@
     },
     {
       "text": "About",
-      "url": "/about",
+      "url": "/about/",
       "external": false
     },
     {
       "text": "My Work",
-      "url": "/my-work",
+      "url": "/my-work/",
       "external": false
     },
     {
       "text": "Blog",
-      "url": "/blog",
+      "url": "/blog/",
       "external": false
     },
     {
       "text": "Contact",
-      "url": "/contact",
+      "url": "/contact/",
       "external": false
     }
   ]
