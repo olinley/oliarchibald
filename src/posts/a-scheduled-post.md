@@ -44,4 +44,6 @@ In the case of both sites, certain internal links were causing this to happen an
 
 To conclude, be sure to regularly check the server logs and Search Console's coverage reports for unusual crawl spikes. Check on testing to see if parameterisation leads to strange internal linking behaviour, and keep a record of where backlinks are pointing to.
 
+I'm not the first to discuss this issue...
+
 Hope this has proven useful. Really interested to know if anyone else has experienced similar issues for assurance I'm not shouting into the void. Let me know in the comments.
