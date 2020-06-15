@@ -2,16 +2,13 @@
 title: The curse of infinite parameters
 date: 2022-06-18
 tags:
-- blog
+- technical seo
+- log file analysis
 
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
 
 For my inaugural post, I want to explore an unexpected issue that's cropped up on a couple of sites I've worked on. Each of which happened after site re-designs, although the issue is more specific to subsequent code changes. The first instance happened on a section of a site that migrated to a new CMS. The other occurred after a client updated to a custom Wordpress theme. For this post, I'll largely concentrate on the former.
-
-Server logs showed a massive spike in Googlebot requests to parameters
-
-Mirrored in Search Console's Excluded section
 
 Changes to the internal linking logic introduced bugs to how parameterisation was handled within the navigation. Went something like this...
 
@@ -19,42 +16,32 @@ Attempting to access internal links from certain parameterised URL variants woul
 
 > [https://website.com/category/?random_parameter=wtf/page/6/page/6/page/2/page/6/page/6/page/6/page/6/page/2/page/2/page/3/page/6/page/2/page/6/page/2/page/6/page/6/page/2/page/6/page/3/page/6/page/3/page/2/page/3/page/3/page/3/page/2/page/3/page/3/page/2/page/2/page/6/page/2/page/3/page/3/page/2/page/2/page/2/page/3/page/2/](https://website.com/category/?random_parameter=wtf/page/6/page/6/page/2/page/6/page/6/page/6/page/6/page/2/page/2/page/3/page/6/page/2/page/6/page/2/page/6/page/6/page/2/page/6/page/3/page/6/page/3/page/2/page/3/page/3/page/3/page/2/page/3/page/3/page/2/page/2/page/6/page/2/page/3/page/3/page/2/page/2/page/2/page/3/page/2/ "https://website.com/category/?random_parameter=wtf/page/6/page/6/page/2/page/6/page/6/page/6/page/6/page/2/page/2/page/3/page/6/page/2/page/6/page/2/page/6/page/6/page/2/page/6/page/3/page/6/page/3/page/2/page/3/page/3/page/3/page/2/page/3/page/3/page/2/page/2/page/6/page/2/page/3/page/3/page/2/page/2/page/2/page/3/page/2/")
 
-As you can expect, duplicate content hell.
+_As you can expect, duplicate content hell._
 
-A massive spike in Googlebot requests to these parameter variants further solidified the issue. 98% of requests were being made 
+The issue was initially discovered via server logs. We saw a massive spike in Googlebot requests, with 98% of those concentrated on these iffy parameter URLs. Hints to this abnormal crawler activity were also mirrored in the Excluded section of Search Console's Coverage reports. Thoughts and prayers to anyone reading that's discovered the issue anywhere other than Excluded.
 
-At this stage I should add that parameterisation isn't utilised on the affected page types of either site, so the issue was completely unforeseen. 
+Depending on the number of sub-category variations that are possible on any given site, this can become a huge problem.
 
-Each required code changes to the internal linking logic and didn't factor in how parameterised URLs should be handled. But they didn't necessarily need to, given that parameterisation 
+Here's how bad it got for us...
 
-I'm going to be talking more about the former case.
+![](/images/billionurls.jpeg)  
 
-Essentially code bugs in the front end meant that whenever a parameterised URL variant was accessed, accessing other links on the page would instead append the new path to the existing URL, rather than simply directing to the new page.
+_And this probably isn't even the full picture._
 
-Endless variants of duplicate pages are accessible to crawlers, which get trapped in an endless cycle and sap crawl budget.
+At this stage I should add that parameterisation isn't utilised on these pages (same case with the other site), and was therefore completely overlooked in the build process. Neither I or the engineers anticipated the issue cropping up.
 
-But how bad can this get?
+After some initial hypothesis that we were victims of sophisticated malicious activity, I eventually discovered the root cause via a handful of sites linking to us via (what looked like) custom tracking parameters.
 
-![](/images/billionurls.jpeg)
+The lazy solution was a few disallow rules in robots.txt. Balance was restored and actual pages being crawled again. 
 
-Looking through Search Console's coverage issues can usually provide hints to whether Google is crawling, or indexing, infinite pages like the example above. SC doesn't have an exact name for this and it could fall under any multitude of their listed issues. Here it's best to look out for an abnormally high number (as per above).
+I've done my part, goodbye.
 
-Analysing server log requests will provide the most telling sign that crawl budget has been affected. At its peak, Googlebot requests to infinite page parameters made up around 98% of daily crawls.
+REVIEW THE BELOW...
 
-## How does this happen?
+The real effort was working with the development team to understand behaviours leading to infinite URL generation. 
 
-Bugs like this are more likely to occur on pagetypes that don't typically utilise any form of parameterisation. Therefore the possibility of this bug occurring isn't considered in the build process.
+In the case of both sites, certain internal links were causing this to happen and identifying those helped us to fix the bug.
 
-In our case a blanket noindex rule on parameter URLs saved us from the hell of Google indexing these duplicate pages.
+To conclude, be sure to regularly check the server logs and Search Console's coverage reports for unusual crawl spikes. Check on testing to see if parameterisation leads to strange internal linking behaviour, and keep a record of where backlinks are pointing to.
 
-Google was discovering some old backlinks to (presumably) affiliate links in the farthest reaches of the netherweb...
-
-Things to cover:
-
-What was the cause
-
-Worst case scenario - no block on parameters, indexable URLs
-
-What did/didn't work - noindex,nofollow robots.txt
-
-SEO handling - robots.txt
+Hope this has proven useful. Really interested to know if anyone else has experienced similar issues for assurance I'm not shouting into the void. Let me know in the comments.
