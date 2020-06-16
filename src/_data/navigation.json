@@ -1,11 +1,6 @@
 {
   "items": [
     {
-      "text": "My Work",
-      "url": "/my-work/",
-      "external": ""
-    },
-    {
       "text": "Home",
       "url": "/",
       "external": false
@@ -18,6 +13,11 @@
     {
       "text": "About",
       "url": "/about/",
+      "external": ""
+    },
+    {
+      "text": "My Work",
+      "url": "/my-work/",
       "external": ""
     },
     {
