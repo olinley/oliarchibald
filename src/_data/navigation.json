@@ -6,23 +6,23 @@
       "external": false
     },
     {
+      "text": "Blog",
+      "url": "/blog",
+      "external": false
+    },
+    {
       "text": "About",
       "url": "/about/",
-      "external": false
+      "external": ""
     },
     {
       "text": "My Work",
       "url": "/my-work/",
-      "external": false
-    },
-    {
-      "text": "Blog",
-      "url": "/blog/",
-      "external": false
+      "external": ""
     },
     {
       "text": "Contact",
-      "url": "/contact/",
+      "url": "/contact",
       "external": false
     }
   ]

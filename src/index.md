@@ -1,9 +1,11 @@
 ---
 layout: home
 title: Technical SEO and stuff
-postsHeading: Latest posts
-archiveButtonText: See all posts
+postsHeading: Latest from the blog
+archiveButtonText: See all
 socialImage: ''
 
 ---
-I'm a technical and strategy based SEO consultant. This is my site.
+I'm a technical and strategy based SEO consultant with 10 years experience. 
+
+Available for freelance SEO support, either for one-off projects or on a retainer basis
