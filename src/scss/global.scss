@@ -44,6 +44,8 @@ hr {
 // For when metric attributes are added to img elements
 img {
   height: auto;
+  border-radius: 8px;
+  border-color: var(--color-text);
 }
 
 :focus {
