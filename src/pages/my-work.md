@@ -2,6 +2,7 @@
 title: My Work
 permalink: "/work/index.html"
 layout: layouts/page.njk
+
 ---
 ## Camera Jabber
 
@@ -15,6 +16,6 @@ Some of their greatest hits include:
 * AMP carousel (when Google gave carousel snippets for camera news)
 * And everybody's favourite... star rating snippets
 
-> Oli identifies issues before they become issues, meaning we can get ahead of any problems before they have an impact on our search performance. This period is obviously challenging for any business and we've had to cut back many of our freelance expenditures, but we deemed Oli's work too crucial to our ongoing operation. He's a vital asset, and we consider him part of the team.
+> Oli identifies issues before they become issues, meaning we can get ahead of any problems before they have an impact on our search performance. This period is obviously challenging for any business and everyone is looking closely at their budgets, but we deem Oli's work crucial to our ongoing operation. He's a vital asset, and we consider him part of the team.
 >
 > _- Jeff Meyer | Director, Camera Jabber_
