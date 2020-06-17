@@ -5,5 +5,8 @@
     color: var(--color-text);
   }
   // background: var(--color-bg-glare);
-  border-bottom: 1px dashed var(--color-bg);
+  border-bottom: 1px groove var(--color-text);
+  // position: fixed;
+  // width: 100%;
+  // top: 0;
 }
