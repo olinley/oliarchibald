@@ -10,7 +10,7 @@ I've worked with photography news and reviews site Camera Jabber since their ear
 
 ![](/images/cj-ga-1.png)
 
-Much our focus has been around optimising existing articles rich snippet results to bolster CTR, such as answer boxes, star ratings and AMP carousel. 
+Much our focus has been around optimising existing articles to generate relevant rich snippet results and drive CTR, such as answer boxes, star ratings and AMP carousel. 
 
 ![](/images/cj-star-ratings.PNG)
 
