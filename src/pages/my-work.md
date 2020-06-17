@@ -14,7 +14,7 @@ Much our focus has been around optimising existing articles to generate relevant
 
 ![](/images/cj-star-ratings.PNG)
 
-In tandem with their existing content, I've used historic trends to help Camera Jabber compete for newly released, or trending, products (where historic search data isn't available). 
+In tandem with their existing content, I've used historic trends and data to help Camera Jabber in their ongoing challenge to compete for newly released, or trending, products (where historic search volume isn't available). 
 
 ![](/images/cj-answerbox-1.PNG)
 
