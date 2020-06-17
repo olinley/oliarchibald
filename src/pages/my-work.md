@@ -1,6 +1,6 @@
 ---
 title: My Work
-permalink: "/work/index.html"
+permalink: "/my-work/index.html"
 layout: layouts/page.njk
 
 ---
