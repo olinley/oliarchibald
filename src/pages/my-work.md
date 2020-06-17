@@ -1,6 +1,6 @@
 ---
 title: My Work
-permalink: "/my-work/index.html"
+permalink: "/work/index.html"
 layout: layouts/page.njk
 
 ---
@@ -16,4 +16,6 @@ Some of their greatest hits include:
 * AMP carousel (when Google gave carousel snippets for camera news)
 * And everybody's favourite... star rating snippets
 
-Chuffed to be considered an honourary member of their team!
+> Oli identifies issues before they become issues, meaning we can get ahead of any problems before they have an impact on our search performance. This period is obviously challenging for any business and we've had to cut back many of our freelance expenditures, but we deemed Oli's work too crucial to our ongoing operation. He's a vital asset, and we consider him part of the team.
+>
+> _- Jeff Meyer | Director, Camera Jabber_
