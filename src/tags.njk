@@ -17,6 +17,8 @@ permalink: /tags/{{ tag }}/
 
 {% extends 'layouts/base.njk' %}
 
+<meta name="robots" content="noindex,follow">
+
 {# Intro content #}
 {% set introHeading %}Posts filed under “{{ tag }}”{% endset %}
 {% set introHeadingLevel = '2' %}
@@ -33,3 +35,4 @@ permalink: /tags/{{ tag }}/
     {% include "partials/components/pagination.njk" %}
   </main>
 {% endblock %}
+

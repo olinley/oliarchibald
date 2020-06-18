@@ -5,7 +5,8 @@
     color: var(--color-text);
   }
   // background: var(--color-bg-glare);
-  border-bottom: 1px groove var(--color-text);
+  border-bottom: 1px solid;
+  border-color: var(--color-text);
   // position: fixed;
   // width: 100%;
   // top: 0;

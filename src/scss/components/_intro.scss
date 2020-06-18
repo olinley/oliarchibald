@@ -16,10 +16,10 @@
 
   &__heading {
     max-width: 40ex;
-    color: var(--color-theme-feature-text);
+    color: var(--color-theme-primary);
 
     &--compact {
-      max-width: 20ex;
+      max-width: 90ex;
     }
   }
 }

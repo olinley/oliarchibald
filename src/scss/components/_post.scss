@@ -19,11 +19,15 @@
     }
 
     a:not([class]) {
-      color: var(--color-dark);
+      text-shadow: 0px 1px 1px var(--color-theme-primary);
+      color: var(--color-text);
       position: relative;
       display: inline-block;
-      background: var(--color-theme-highlight);
-      padding: 0.2rem 0.4rem 0.3rem 0.4rem;
+      // background: 
+      //   var(--color-text);
+      //   border-radius: 8px;
+      //   outline-offset: -6px;
+      // padding: 0.2rem 0.4rem 0.3rem 0.4rem;
       text-decoration: none;
       word-break: break-word;
 
