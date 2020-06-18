@@ -1,6 +1,6 @@
 ---
 date: 2020-06-21
-title: new post
+title: Infinite pages and crawl traps
 tags: []
 
 ---
