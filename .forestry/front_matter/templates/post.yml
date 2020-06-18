@@ -16,4 +16,4 @@ fields:
   name: tags
   label: tags
 pages:
-- src/posts/blah-blah.md
+- src/blog/new-post.md
