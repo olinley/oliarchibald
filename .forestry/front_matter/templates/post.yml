@@ -17,4 +17,3 @@ fields:
   label: tags
 pages:
 - src/blog/new-post.md
-- src/blog/a-scheduled-post.md
