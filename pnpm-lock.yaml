@@ -5678,6 +5678,7 @@ packages:
     dev: false
     name: stalfos
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/hankchizljaw/stalfos/tar.gz/c8971d22726326cfc04089b2da4d51eeb1ebb0eb'
     version: 2.0.0
 specifiers:
@@ -5699,7 +5700,7 @@ specifiers:
   rollup-plugin-commonjs: ^10.1.0
   rollup-plugin-json: ^4.0.0
   rollup-plugin-node-resolve: ^5.2.0
-  sass: ^1.26.3
+  sass: ^1.26.8
   semver: ^6.3.0
   slugify: ^1.4.0
   stalfos: 'github:hankchizljaw/stalfos#c8971d22726326cfc04089b2da4d51eeb1ebb0eb'
