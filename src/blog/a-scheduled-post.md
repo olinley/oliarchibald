@@ -2,7 +2,7 @@
 title: Infinite pages and crawl traps
 date: 2022-06-18
 tags:
-- log file analysis
+- seo
 
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
