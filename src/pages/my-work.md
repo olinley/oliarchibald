@@ -6,7 +6,7 @@ layout: layouts/page.njk
 ---
 ## Camera Jabber
 
-I've worked with photography news and reviews site Camera Jabber since their early days in 2017. In that time I've helped them to drive +136% YoY organic visits through ongoing technical support, load time performance iterations and on-page optimisation.
+I've worked with photography news and reviews site Camera Jabber since their early days in 2017, helping them drive +136% in YoY organic visits through ongoing technical support and data-led content improvements.
 
 ![](/images/cj-ga-1.png)
 
