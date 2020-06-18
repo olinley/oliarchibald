@@ -1,7 +1,8 @@
 ---
 date: 2020-06-21
 title: Infinite pages and crawl traps
-tags: []
+tags:
+- seo
 
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
@@ -12,19 +13,19 @@ Changes to the internal linking logic presented unexpected bugs to how parameter
 
 Root parameter...
 
-> [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")
+> /category/?random_parameter=wtf
 
 navigates to internal link...
 
-> [https://website.com/category/?random_parameter=wtf/category/london/](https://website.com/category/?random_parameter=wtf/category/london/ "https://website.com/category/?random_parameter=wtf/category/london/")
+> /category/?random_parameter=wtf/london/
 
 navigate to next link...
 
-> [https://website.com/category/?random_parameter=wtf/category/london/category/bristol/](https://website.com/category/?random_parameter=wtf/category/london/category/bristol/ "https://website.com/category/?random_parameter=wtf/category/london/category/bristol/")
+> /category/?random_parameter=wtf/london/bristol/
 
 until you end up with...
 
-> [https://website.com/category/?random_parameter=wtf/category/london/category/bristol/category/birminghamcategory/chelmsford/category/manchester/category/exeter/category/liverpool/category/newcastle/category/glasgow/category/edinburgh/category/london/category/bristol/category/birminghamcategory/chelmsford/category/manchester/category/exeter/category/liverpool/category/newcastle/category/glasgow/category/edinburgh/](https://website.com/category/?random_parameter=wtf/category/london/category/bristol/category/birminghamcategory/chelmsford/category/manchester/category/exeter/category/liverpool/category/newcastle/category/glasgow/category/edinburgh/category/london/category/bristol/category/birminghamcategory/chelmsford/category/manchester/category/exeter/category/liverpool/category/newcastle/category/glasgow/category/edinburgh/ "https://website.com/category/?random_parameter=wtf/category/london/category/bristol/category/birminghamcategory/chelmsford/category/manchester/category/exeter/category/liverpool/category/newcastle/category/glasgow/category/edinburgh/category/london/category/bristol/category/birminghamcategory/chelmsford/category/manchester/category/exeter/category/liverpool/category/newcastle/category/glasgow/category/edinburgh/")
+> /category/?random_parameter=wtf/london/bristol/birmingham/chelmsford/manchester/exeter/liverpool/newcastle/glasgow/edinburgh/london/bristol/birmingham/chelmsford/cardiff/exeter/liverpool/braintree/glasgow/edinburgh/
 
 And so on.
 
