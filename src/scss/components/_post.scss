@@ -59,6 +59,8 @@
       padding-left: get-size(500);
       font-style: italic;
       font-size: get-size(600);
+      word-wrap: break-word;
+    
 
       p {
         opacity: 0.85;
