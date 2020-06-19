@@ -50,7 +50,7 @@ For sites with large taxonomies (as was the case with us), this can evidently be
 
 If, on the other hand, parameterisation _is_ an intended feature on areas of your site (such as faceted navigation), you'll just as likely be able to spot similar patterns via a site crawl, or a good old Google _site:_ search for the offending parameters.
 
-## Escaping the trap
+## Getting out of crawl traps
 
 After some initial hypothesis that we were victims of sophisticated malicious activity, I eventually discovered the root cause via a handful of sites linking to us via (what looked like) custom tracking parameters.
 
