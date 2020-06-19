@@ -4,4 +4,4 @@ permalink: '/contact/index.html'
 layout: 'layouts/contact.njk'
 ---
 
-Drop me a line...
+Let's chat SEO, obscure 80s music
