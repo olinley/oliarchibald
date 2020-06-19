@@ -16,4 +16,4 @@ fields:
   name: tags
   label: tags
 pages:
-- src/blog/infinite-pages.md
+- src/blog/new-post.md
