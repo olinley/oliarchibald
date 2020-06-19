@@ -1,7 +1,7 @@
 ---
-title: 'Contact'
-permalink: '/contact/index.html'
-layout: 'layouts/contact.njk'
----
+title: Contact
+permalink: "/contact/index.html"
+layout: layouts/contact.njk
 
-Let's chat SEO, obscure 80s music
+---
+If you're looking for SEO support, interested in collaborating or just want a natter, then get in touch via the form below.
