@@ -25,17 +25,23 @@ navigate to next link...
 
 until you end up with...
 
-> /category/?random_parameter=wtf/london/bristol/birmingham/chelmsford/manchester/exeter/liverpool/newcastle/glasgow/edinburgh/london/bristol/birmingham/chelmsford/cardiff/exeter/liverpool/braintree/glasgow/edinburgh/
+> /category/?random_parameter=wtf/london/bristol/birmingham/chelmsford/manchester/exeter/liverpool/newcastle/glasgow/edinburgh/london/bristol/birmingham/chelmsford/cardiff/exeter/liverpool/braintree/glasgow/norwich/
 
 And so on.
 
 As you can expect, duplicate content hell.
 
-The issue was initially discovered via server logs. We saw a massive spike in Googlebot requests, with 98% of those concentrated on 'infinite pages' like the example above. Hints to this abnormal crawler activity were also mirrored in the Excluded section of Search Console's Coverage reports. Thoughts and prayers if anyone reading has discovered a similar issue in a different tab.
+The issue was initially discovered via server logs. We saw a massive spike in Googlebot requests, with 98% of those concentrated on infinite, non-existent pages like the example above. 
+
+Hints to this abnormal crawler activity were also mirrored in Search Console's Coverage reports. Fortunately these weren't indexable, otherwise we'd be up shit creek.
+
+Thoughts and prayers if anyone reading has discovered a similar issue in a different tab.
+
+![](/images/infinite-pages.png)
 
 Each of these data sources made it clear that G-bot was continually attempting to crawl A LOT of these pages as a result of getting caught in this near-infinite loop (not to be confused with redirect loops).
 
-For sites with large taxonomies (as was the case with us), this can be a huge problem (think locations, car models or clothing category structures for instance).
+For sites with large taxonomies (as was the case with us), this can be a huge problem (think locations, car models or clothing based categories for instance).
 
 How much is 'A LOT'?
 
