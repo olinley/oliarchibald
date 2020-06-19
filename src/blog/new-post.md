@@ -1,6 +1,6 @@
 ---
 date: 2020-06-20
-title: Infinite pages and getting out of crawl traps
+title: Infinite pages
 tags:
 - technical seo
 - seo
