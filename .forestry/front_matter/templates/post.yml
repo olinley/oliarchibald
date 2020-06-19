@@ -16,4 +16,5 @@ fields:
   name: tags
   label: tags
 pages:
+- src/blog/infinite-pages-and-escaping-crawl-traps.md
 - src/blog/new-post.md
