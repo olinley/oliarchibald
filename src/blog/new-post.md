@@ -2,6 +2,7 @@
 date: 2020-06-20
 title: Infinite pages and getting out of crawl traps
 tags:
+- technical seo
 - seo
 
 ---
@@ -31,25 +32,25 @@ And so on.
 
 As you can expect, duplicate content hell.
 
-The issue was initially discovered via server logs. We saw a massive spike in Googlebot requests, with 98% of those concentrated on infinite, non-existent pages like the example above. 
+## Shhh, I'm hunting spiders
 
-Hints to this abnormal crawler activity were also mirrored in Search Console's Coverage reports. Fortunately these weren't indexable, otherwise we'd be up shit creek.
+At this stage I should add that parameterisation isn't intended on these pages (same case with the other site), and was therefore completely overlooked in the build process. Neither I or the engineers anticipated the issue cropping up.
 
-Thoughts and prayers if anyone reading has discovered a similar issue in a different tab.
+The issue was initially discovered via the server logs where we saw a massive spike in Googlebot requests; 98% of which were concentrated on infinite, non-existent pages like the example above. 
+
+This was simultaneously mirrored in Search Console's Coverage reports, initially spotting an increase in crawlable indexed URLs. Despite applying noindex,nofollow Google only paid attention to the first instruction yet, was continuing to 'discover' an increasing number of infinite pages.
+
+Believe me when I say it got ridiculous...
 
 ![](/images/infinite-pages.png)
 
-Each of these data sources made it clear that G-bot was continually attempting to crawl A LOT of these pages as a result of getting caught in this near-infinite loop (not to be confused with redirect loops).
+_And this almost certainly wasn't the full picture._
 
-For sites with large taxonomies (as was the case with us), this can be a huge problem (think locations, car models or clothing based categories for instance).
+For sites with large taxonomies (as was the case with us), this can evidently be a huge problem (think locations, car models or clothing based categories for instance).
 
-How much is 'A LOT'?
+If, on the other hand, parameterisation _is_ an intended feature on areas of your site (such as faceted navigation), you'll just as likely be able to spot similar patterns via a site crawl, or a good old Google _site:_ search for the offending parameters.
 
-![](/images/billionurls.jpeg)
-
-_And this probably isn't even the full picture._
-
-At this stage I should add that parameterisation isn't utilised on these pages (same case with the other site), and was therefore completely overlooked in the build process. Neither I or the engineers anticipated the issue cropping up.
+## Escaping the trap
 
 After some initial hypothesis that we were victims of sophisticated malicious activity, I eventually discovered the root cause via a handful of sites linking to us via (what looked like) custom tracking parameters.
 
@@ -57,6 +58,6 @@ The lazy solution was a few robots.txt disallow rules against the offending para
 
 There's no single fix solution here. Anyone else experiencing similar bugs will be completely unique to that site. The best approach is working from the 'root parameter' (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf/ "https://website.com/category/?random_parameter=wtf/")) to understand which relative links are causing infinite page duplicates.
 
-I'm certainly not the first to discuss this issue. Google has some typically [brief documentation](https://support.google.com/webmasters/answer/76401?hl=en) on the matter and there's a great guide [here](https://www.contentkingapp.com/academy/crawler-traps/) worth reading.
+I'm certainly not the first to discuss this issue. Google even has some typically [brief documentation](https://support.google.com/webmasters/answer/76401?hl=en) on the matter and there's a handy guide [here](https://www.contentkingapp.com/academy/crawler-traps/) worth reading.
 
-However, the circumstances surrounding this particular case felt unique enough to shed light on. Plus I'm keen to know if anyone else out there has ever experienced crawl rates in the billions.
+However, the circumstances surrounding this particular case felt niche enough to shed light on. Plus I'm keen to know if anyone else out there has ever experienced crawl rates in the billions.
