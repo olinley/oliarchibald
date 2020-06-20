@@ -6,9 +6,9 @@ layout: layouts/contact.njk
 ---
 Hola, I'm ~~Ollie~~, ~~Olly~~, Oli.
 
-Been in the game for 10 years, having started my career at Builtvisible before going in-house at Deliveroo.
+Been in the SEO game for 10 years, having started my career at Builtvisible before going in-house at Deliveroo.
 
-These days I'm a freelance SEO consultant, mainly working with clients in the ecommerce and publishing spaces.
+These days I'm a freelance SEO consultant, mainly working with clients in the ecommerce and publishing spaces. However, I'm open to most things.
 
 ## What do I actually do?
 
