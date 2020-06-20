@@ -6,6 +6,6 @@ archiveButtonText: See all
 socialImage: ''
 
 ---
-Hello I'm Oli and I do the SEO.
+Hello, I'm Oli and I do the SEO.
 
 I'm available for freelance support, either for one-off projects, collaborations or on a retainer basis.
