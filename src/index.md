@@ -6,4 +6,6 @@ archiveButtonText: See all
 socialImage: ''
 
 ---
-I'm available for freelance SEO support, either for one-off projects, collaborations or on a retainer basis.
+Hello I'm Oli and I do the SEO.
+
+I'm available for freelance support, either for one-off projects, collaborations or on a retainer basis.
