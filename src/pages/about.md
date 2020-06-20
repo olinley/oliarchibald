@@ -29,6 +29,4 @@ Am available on a project or retainer basis, with specialist areas including:
 * Opportunity sizing
 * Competitor analysis
 
-I don’t build links, sorry.
-
 If you're interested in working with me, then get in touch and let's shoot the proverbial.
