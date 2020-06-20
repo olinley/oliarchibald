@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: "/about/index.html"
-layout: layouts/contact.njk
+layout: layouts/page.njk
 
 ---
 Hola, I'm ~~Ollie~~, ~~Olly~~, Oli.
@@ -32,5 +32,3 @@ Am available on a project or retainer basis, with specialist areas including:
 I don’t build links, sorry.
 
 If you're interested in working with me, then get in touch and let's shoot the proverbial.
-
-oli.l.archibald@gmail.com
