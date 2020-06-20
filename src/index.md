@@ -6,6 +6,6 @@ archiveButtonText: See all
 socialImage: ''
 
 ---
-Technical and strategy based SEO consultant with 10 years experience.
+Technical, research and strategy focused SEO consultant with 10 years experience.
 
-I'm available for freelance SEO support, either on a one-off project or retainer basis.
+I'm available for freelance SEO support, either for one-off projects, collaborations or on a retainer basis. 
