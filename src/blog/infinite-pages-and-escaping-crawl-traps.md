@@ -1,5 +1,5 @@
 ---
-date: 2020-07-05
+date: 2020-07-04
 title: Infinite pages and escaping crawl traps
 tags:
 - technical seo
@@ -7,21 +7,25 @@ tags:
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
 
-_Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. This is a niche case study, enjoy._
+_Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. This is a niche case study of my own experiences, enjoy._
 
-For the inaugural post, I want to explore the plight of infinite pages and crawl traps. A topic that's been covered numerous times before (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some particularly handy guides), yet I've 
+For the inaugural post, I want to explore infinite pages and crawl traps: a topic that's been covered numerous times before (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides). Yet, having dealt with this issue on multiple occasions, I perhaps have a modicum of authority on the matter and feel it's worth shedding further light on what worked/didn't work from a personal standpoint.
 
- the circumstances surrounding my own experiences were similar in nature on two different sites...
+The two times I got caught in crawl traps were the result of code changes introduced during site re-designs. The first instance happened on a section of a site that migrated to a new CMS. The other occurred after an entire site was migrated to a custom Wordpress theme. Here I'll largely be concentrating on the former.
 
-For the inaugural post, I want to explore an unexpected issue that's cropped up on a couple of sites I've worked on in recent times. Each of which were the result of code changes introduced during site re-designs. The first instance happened on a section of a site that migrated to a new CMS. The other occurred after a client updated to a custom Wordpress theme. Here I'll largely be concentrating on the former.
+## Finding a needle in a haystack
 
-Changes to the internal linking logic presented unexpected bugs to how parameterisation was handled within the navigation. Attempting to access internal links from certain parameterised URL variants would append the new URL path to the relative link. Rather than simply directing to a new page, you end up with a seemingly infinite generation of URLs that looks something like:
+After going live with new landing pages on a new headless CMS, changes to the relative linking logic presented unexpected bugs to how parameter URLs were handled within the navigation.
+
+The twist here is that parameterisation wasn't an intended feature on these pages and was therefore completely overlooked in the build/staging process. Neither I or the engineers anticipated the issue cropping up.
+
+Attempting to access internal links from certain parameterised URL variants would append the new URL path to the existing one. To illustrate, rather than simply directing to a new page you end up with a seemingly infinite generation of URLs like this:
 
 Root parameter...
 
 > /category/?random_parameter=wtf
 
-navigates to internal link...
+navigate to internal link...
 
 > /category/?random_parameter=wtf/london/
 
@@ -37,9 +41,7 @@ And so on.
 
 As you can expect, duplicate content hell.
 
-## Shhh, I'm hunting spiders
-
-The issue was initially discovered via the server logs where we saw a massive spike in Googlebot requests; 98% of which were concentrated on infinite, non-existent pages like the example above.
+The issue was initially discovered via the server logs where we saw a massive spike in Googlebot activity. 98% of requests were concentrated on infinite, non-existent pages (similar to the example above), which were rooted to a handful of unknown parameters.
 
 This was simultaneously mirrored in Search Console's Coverage reports, initially spotting an increase in crawlable indexed URLs. Despite applying noindex,nofollow Google only paid attention to the first instruction yet, was continuing to 'discover' an increasing number of infinite pages.
 
@@ -49,11 +51,9 @@ Believe me when I say it got ridiculous...
 
 _And this almost certainly wasn't the full picture._
 
-For sites with large taxonomies (as was the case with us), this can evidently be a huge problem (think locations, car models or clothing based categories for instance).
+For sites with large taxonomies (as was the case with us), this can evidently be a huge problem (think locations, car models or clothing based categories for instance) where crawl budget can get utterly sapped.
 
-At this stage I should add that parameterisation wasn't an intended feature on these pages (same case with the other site), and was therefore completely overlooked in the build process. Neither I or the engineers anticipated the issue cropping up.
-
-After some brief hypothesising that we were victims of sophisticated malicious activity, I eventually discovered the root cause via a handful of sites linking to us via (what looked like) custom tracking parameters.
+As mentioned, parameterisation wasn't featured on the affected pages so it took a while to figure out where these specific ones came from. ~~After some brief hypothesising that we were somehow being spammed,~~ I eventually discovered via backlink data that a handful of sites were linking to a couple of these landing pages with (what appeared to be) custom tracking parameters.
 
 If, on the other hand, parameterisation _is_ an intended feature on areas of your site (such as faceted navigation), you'll just as likely be able to spot similar patterns via a site crawl, or a good old Google _site:_ search for the offending parameters.
 
