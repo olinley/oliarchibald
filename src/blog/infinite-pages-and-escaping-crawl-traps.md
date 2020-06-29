@@ -1,5 +1,5 @@
 ---
-date: 2020-06-23
+date: 2020-07-05
 title: Infinite pages and escaping crawl traps
 tags:
 - technical seo
@@ -9,7 +9,9 @@ tags:
 
 _Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. This is a niche case study, enjoy._
 
-For the inaugural post, I want to explore the issue of infinite pages and crawl traps. A topic that's been covered numerous times before (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some particularly handy guides). However, the circumstances surrounding my own experiences were similar in nature on two different sites...
+For the inaugural post, I want to explore the plight of infinite pages and crawl traps. A topic that's been covered numerous times before (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some particularly handy guides), yet I've 
+
+ the circumstances surrounding my own experiences were similar in nature on two different sites...
 
 For the inaugural post, I want to explore an unexpected issue that's cropped up on a couple of sites I've worked on in recent times. Each of which were the result of code changes introduced during site re-designs. The first instance happened on a section of a site that migrated to a new CMS. The other occurred after a client updated to a custom Wordpress theme. Here I'll largely be concentrating on the former.
 
@@ -37,7 +39,7 @@ As you can expect, duplicate content hell.
 
 ## Shhh, I'm hunting spiders
 
-The issue was initially discovered via the server logs where we saw a massive spike in Googlebot requests; 98% of which were concentrated on infinite, non-existent pages like the example above. 
+The issue was initially discovered via the server logs where we saw a massive spike in Googlebot requests; 98% of which were concentrated on infinite, non-existent pages like the example above.
 
 This was simultaneously mirrored in Search Console's Coverage reports, initially spotting an increase in crawlable indexed URLs. Despite applying noindex,nofollow Google only paid attention to the first instruction yet, was continuing to 'discover' an increasing number of infinite pages.
 
@@ -61,7 +63,7 @@ In our case, Google respected noindex, but nofollow was ineffective in halting c
 
 Balance restored, but the root of the problem still isn't solved.
 
-There's no single fix solution here. If parameterisation is an indended feature on your site then locating which relative links lead to infinite page generation should be relatively easy. 
+There's no single fix solution here. If parameterisation is an indended feature on your site then locating which relative links lead to infinite page generation should be relatively easy.
 
 On affected pages where parameterisation isn't utilised, the root cause won't be so obvious. However, once you've identified the problematic parameters, you should be able to work from the root URL (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand which internal links are problematic.
 
