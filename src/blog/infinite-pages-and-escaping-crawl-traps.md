@@ -1,5 +1,5 @@
 ---
-date: 2020-07-04
+date: 2020-07-03
 title: Infinite pages and escaping crawl traps
 tags:
 - technical seo
@@ -67,4 +67,4 @@ In cases where it _isn't_ utilised, the root cause won't be so obvious as parame
 
 Whether intended or otherwise, it should be possible to work from the root URL of your problematic parameters (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand where relative links have been erroneously coded in the navigation.
 
-Regardless, the circumstances surrounding this particular case felt niche enough to shed light on. Plus I'm keen to know if anyone else out there has ever experienced crawl rates in the billions.
+Hopefully this has proved interesting/useful for someone. Thanks for reading.
