@@ -63,14 +63,8 @@ Balance restored, but the root of the problem still isn't solved.
 
 There's no single fix solution here. If parameterisation _is_ an intended feature on your site then locating which relative links lead to infinite page generation should be relatively easy. Site crawl data should also help you get an accurate read on the scale of the issue.
 
-In cases where parameterisation _isn't_ utilised, the root cause won't be so obvious as they're unlikely to be included within your internal linking setup. 
+In cases where it _isn't_ utilised, the root cause won't be so obvious as parameterisation is unlikely to be included within your internal linking. If you've discovered increased crawls to unknown parameter URL variants, it's certainly worth checking your backlinks for sites that may have implemented their own custom tracking.
 
-If you've found yourself discovering increased crawls to unknown parameter URL variants, it's certainly worth checking your backlinks for sites that may have implemented their own custom tracking.
-
-Whether intended or otherwise, it should be possible to work from the root URL of your problematic parameters (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand where relative link errors exist in the navigation.
-
-Whether intended or otherwise, the source of the issue is likely a result of erroneous coding in the relative linking setup.
-
-If you're in a similar predicament of noticing unknown parameterised versions of your pages, I'd certainly suggest mining your backlinks to find the root cause.
+Whether intended or otherwise, it should be possible to work from the root URL of your problematic parameters (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand where relative links have been erroneously coded in the navigation.
 
 Regardless, the circumstances surrounding this particular case felt niche enough to shed light on. Plus I'm keen to know if anyone else out there has ever experienced crawl rates in the billions.
