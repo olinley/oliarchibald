@@ -12,4 +12,4 @@ I'm available for freelance support, either for one-off projects, collaborations
 
 ## My clients
 
-![](/images/cb_logo_with_url-1white.png)
+<img src="/images/cb_logo_with_url-1white.png" width="360"/>	<img src="/images/skates-co-uk.png" width="360"/>
