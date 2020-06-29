@@ -7,7 +7,7 @@ tags:
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
 
-_Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. This is a niche case study of my own experiences, enjoy._
+_Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. This is a niche case study of my own experiences._
 
 For the inaugural post, I want to explore infinite pages and crawl traps: a topic that's been covered numerous times before (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides). Yet, having dealt with this issue on multiple occasions, I perhaps have a modicum of authority on the matter and feel it's worth shedding further light on what worked/didn't work from a personal standpoint.
 
