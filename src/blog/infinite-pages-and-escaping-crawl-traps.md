@@ -53,9 +53,7 @@ _And this almost certainly wasn't the full picture._
 
 For sites with large taxonomies (as was the case with us), this can evidently be a huge problem (think locations, car models or clothing based categories for instance) where crawl budget can get utterly sapped.
 
-As mentioned, parameterisation wasn't featured on the affected pages so it took a while to figure out where these specific ones came from. ~~After some brief hypothesising that we were somehow being spammed,~~ I eventually discovered via backlink data that a handful of sites were linking to a couple of these landing pages with (what appeared to be) custom tracking parameters.
-
-If, on the other hand, parameterisation _is_ an intended feature on areas of your site (such as faceted navigation), you'll just as likely be able to spot similar patterns via a site crawl, or a good old Google _site:_ search for the offending parameters.
+As mentioned, parameterisation wasn't featured on the affected pages so it took a while to figure out where these specific ones came from. ~~After briefly hypothesising that we were being spammed,~~ I eventually discovered a handful of sites in the backlink data that were linking with (what appeared to be) custom tracking parameters, which matched those in the server logs and Search Console coverage reports.
 
 ## Escaping crawl traps
 
@@ -63,12 +61,16 @@ In our case, Google respected noindex, but nofollow was ineffective in halting c
 
 Balance restored, but the root of the problem still isn't solved.
 
-There's no single fix solution here. If parameterisation is an indended feature on your site then locating which relative links lead to infinite page generation should be relatively easy.
+There's no single fix solution here. If parameterisation _is_ an intended feature on your site then locating which relative links lead to infinite page generation should be relatively easy. Site crawl data should also help you get an accurate read on the scale of the issue.
 
-On affected pages where parameterisation isn't utilised, the root cause won't be so obvious. However, once you've identified the problematic parameters, you should be able to work from the root URL (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand which internal links are problematic.
+In cases where parameterisation _isn't_ utilised, the root cause won't be so obvious as they're unlikely to be included within your internal linking setup. 
 
-Whether intended or otherwise, the source of the issue is likely a result of how relative links have been erroneously coded.
+If you've found yourself discovering increased crawls to unknown parameter URL variants, it's certainly worth checking your backlinks for sites that may have implemented their own custom tracking.
 
-I'm certainly not the first to discuss this issue. There's some handy guides [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) worth reading, and Google has some typically [brief documentation](https://support.google.com/webmasters/answer/76401?hl=en) on the matter.
+Whether intended or otherwise, it should be possible to work from the root URL of your problematic parameters (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand where relative link errors exist in the navigation.
+
+Whether intended or otherwise, the source of the issue is likely a result of erroneous coding in the relative linking setup.
+
+If you're in a similar predicament of noticing unknown parameterised versions of your pages, I'd certainly suggest mining your backlinks to find the root cause.
 
 Regardless, the circumstances surrounding this particular case felt niche enough to shed light on. Plus I'm keen to know if anyone else out there has ever experienced crawl rates in the billions.
