@@ -14,11 +14,10 @@ pagination:
   addAllPagesToCollections: true
 permalink: /tags/{{ tag }}/
 eleventyExcludeFromCollections: true
+noindex: true
 ---
 
 {% extends 'layouts/base.njk' %}
-
-<meta name="robots" content="noindex,follow">
 
 {# Intro content #}
 {% set introHeading %}Posts filed under “{{ tag }}”{% endset %}
