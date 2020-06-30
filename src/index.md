@@ -14,4 +14,4 @@ I'm available for freelance support, either for one-off projects, collaborations
 
 ![](/images/cb_logo_with_url-1white_xs.png)		![](/images/skates-co-uk_xs.png)
 
-<img src="/images/cb_logo_with_url-1white_xs.png" text-align
+<img src="/images/cb_logo_with_url-1white_xs.png" "text-align:center"/>
