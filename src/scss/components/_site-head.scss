@@ -4,12 +4,6 @@
     text-decoration: none;
     color: var(--color-text);
   }
-  // background: var(--color-bg-glare);
-  // border-bottom: 1px solid;
-  // border-color: var(--color-text);
-  // position: fixed;
-  // width: 100%;
-  // top: 0;
   content: ""; /* This is necessary for the pseudo element to work. */ 
   display: block; /* This will put the pseudo element on its own line. */
   margin: 0 auto; /* This will center the border. */
