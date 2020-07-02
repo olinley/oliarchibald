@@ -1,0 +1,10 @@
+.gallery-list {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .gallery-item {
+        width: 50%;
+        justify-content: center;
+        display: flex;
+    }
+}

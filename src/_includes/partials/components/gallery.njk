@@ -1,0 +1,9 @@
+{% if gallery.items %}
+    <ul class="[ gallery-list ] [ box-flex inner-wrapper ]">
+        {% for item in gallery.items %}
+            <li class="gallery-item gap-bottom-500">
+                <img src="{{ item.src }}" alt="{{ item.alt }}"/>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
