@@ -63,7 +63,7 @@ Balance restored, but the root of the problem still isn't solved.
 
 There's no single fix solution here. If parameterisation _is_ an intended feature on your site then locating relative links leading to endless URL generation should be fairly easy. Site crawl data should also help you get an accurate read on the scale of the issue.
 
-In cases where it _isn't_ utilised, the root cause of parameter related crawl traps won't be so obvious, given parameterisation won't be included in your internal linking. If you've discovered increased crawls to unknown parameter URL variants, it's certainly worth checking your backlinks for sites that may have implemented their own custom tracking.
+In cases where it _isn't_ utilised, the root cause of parameter related crawl traps won't be so obvious as parameters won't feature in your internal linking. If you've discovered increased crawls to unknown parameter URL variants, it's certainly worth checking your backlinks for sites that may have implemented their own custom tracking.
 
 Whether intended or otherwise, it should be possible to work from the root URL of your problematic parameters (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand where relative links have been erroneously coded in the navigation.
 
