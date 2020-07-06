@@ -2,6 +2,8 @@
 title: My Work
 permalink: "/my-work/index.html"
 layout: layouts/page.njk
+description: '"Oli identifies issues before they become issues. He''s a vital asset,
+  and we consider him part of the team." - Jeff Meyer | Director, Camera Jabber'
 
 ---
 ## Camera Jabber
