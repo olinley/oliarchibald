@@ -8,11 +8,6 @@ fields:
   config:
     required: true
   label: title
-- name: description
-  type: text
-  config:
-    required: false
-  label: description
 - name: permalink
   type: text
   config:
