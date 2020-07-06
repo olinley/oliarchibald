@@ -1,18 +1,20 @@
 <footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
   <div class="wrapper">
-    <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
+    <div class="[ inner-wrapper ] [ md:box-flex space-between align-start ]">
       {% if site.shortDesc %}
         <div>
           <article class="[ site-foot__details ] [ sf-flow measure-compact ]">
             <h2 class="text-600">{{ site.name }}</h2>
             {{ site.shortDesc | markdownFilter | safe }}
+            <a href= "https://www.linkedin.com/in/oliverlinleyarchibald/">LinkedIn</a>
+            <br>
+            <a href= "https://twitter.com/oli_l_a">Twitter</a>
           </article>
         </div>
       {% endif %}
       <div>
         {% set ariaLabel = 'footer navigation' %}
         {% include "partials/components/nav.njk" %}
-        {# <theme-toggle></theme-toggle> #}
       </div>
     </div>
     {# {% if site.showThemeCredit %}
@@ -20,8 +22,5 @@
         Powered by the <a href="https://hylia.website" rel="external">Hylia Eleventy Starter Kit v{{ pkg.version }}</a>.
       </p>
     {% endif %} #}
-    <a href= "https://www.linkedin.com/in/oliverlinleyarchibald/">LinkedIn</a>
-    <br>
-    <a href= "https://twitter.com/oli_l_a">Twitter</a>
   </div>
 </footer>
