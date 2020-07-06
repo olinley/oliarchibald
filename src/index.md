@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Technical, research and strategy focused SEO consultant
+description: 'Oli identifies issues before they become issues. He's a vital asset, and we consider him part of the team.' - Jeff Meyer | Director, Camera Jabber
 postsHeading: Latest from the blog
 archiveButtonText: See all
 socialImage: ''
