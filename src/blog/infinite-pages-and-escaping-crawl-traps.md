@@ -3,7 +3,8 @@ date: 2020-07-10
 title: Infinite pages and escaping crawl traps
 tags:
 - seo
-description: ''
+description: 'When query strings cause infinite URL paths... on pages that don''t
+  use parameterisation. '
 
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
@@ -12,9 +13,9 @@ _Note: this isn't an article about redirect loops, nor encompassing of all types
 
 For the inaugural post, I want to explore infinite pages and crawl traps. Not a new topic (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides), yet I've dealt with the same specific version of this issue on two occasions, which I think gives me a modicum of authority to shed some helpful advice for anyone else going through the same thing.
 
-In short, I'll be discussing infinite URL paths occurring on parameterised URLs... on pages that don't incorporate parameterisation. Confused? Exactly.
+In short, I'll be discussing infinite URL paths occurring on parameterised URLs... on pages that don't incorporate parameterisation. 
 
-## Finding a needle in a haystack
+## Confused? Exactly.
 
 The two times I ran into crawl traps were the result of code changes, which happened to be introduced during site re-designs. The first instance happened after migrating existing landing pages to a new CMS (Site A). The other occurred after an entire site was migrated to a custom Wordpress theme, although the issue only happened on category pages with pagination (Site B).
 
@@ -28,23 +29,25 @@ _Root category with query string that shouldn't exist..._
 
 _navigate to internal link..._
 
-> /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2/page/2
+> /category/?random_parameter=wtf%2Fpage%2
 
-_navigate to next link..._
+_onto the next link..._
 
-> /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2/page%2Fpage%2F6%2Fpage%2F2/page/2
+> /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2
 
 _until you end up with..._
 
-> /category/?random_parameter=wtf/london/bristol/birmingham/chelmsford/manchester/exeter/liverpool/newcastle/glasgow/edinburgh/london/bristol/birmingham/chelmsford/cardiff/exeter/liverpool/braintree/glasgow/norwich/
+> /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2%2Fpage%2F2page%2F3%2Fpage%2F2%2Fpage%2F297%2F%2Fpage%2F6%2Fpage%2F2%2Fpage%2F2page%2F3%2Fpage%2F2%2Fpage%2F297%2Fpage/297/
 
 And so on.
 
-Something as simple as a missing trailing slash in the relative linking logic is causing the bug. 
+In this example, something as simple as a missing trailing slash in the relative linking logic for paginated links is causing the bug. 
 
-The issue was initially discovered via the server logs where we saw a massive spike in Googlebot activity. 98% of requests were concentrated on infinite, non-existent pages (similar to the example above), which were rooted to a handful of unknown parameters.
+## Finding the trap
 
-This was simultaneously mirrored in Search Console's Coverage reports, initially spotting an increase in crawlable indexed URLs. Despite applying noindex,nofollow Google only paid attention to the first instruction yet, was continuing to 'discover' an increasing number of infinite pages.
+Focusing on Site A for the moment, the issue was initially discovered via the server logs where I noticed a massive spike in Googlebot activity. 98% of requests were concentrated on infinite, non-existent pages, all of which were specific landing page types and rooted to a handful of unknown parameters. 
+
+This was simultaneously mirrored in Search Console's Coverage reports, which showed an increasing numbers of crawlable indexed URLs. Despite applying noindex,nofollow, Google only paid attention to the noindex bit. Access logs continued to show Googlebot getting lost down the infinite page rabbit hole.
 
 Believe me when I say it got ridiculous...
 
@@ -52,20 +55,24 @@ Believe me when I say it got ridiculous...
 
 _And this almost certainly wasn't the full picture._
 
-For sites with large taxonomies (as was the case with us), this can evidently be a huge problem (think locations, car models or clothing based categories for instance). Duplicate content hell with a fine dollop of crawl budget wastage on top.
+## Why is this a problem?
 
-Given parameterisation wasn't featured on the affected pages, it took a while to figure out where these specific ones came from. ~~After briefly wondering if we'd been spammed,~~ I eventually discovered a handful of sites in the backlink data that were linking with (what appeared to be) custom tracking parameters, which matched those in the server logs and Search Console coverage reports.
+The amount of possible 'infinite URL' variations that Googlebot can discover are extrapolated based on the number of categories (other other page types) within your taxonomy (think locations, car models or clothing based categories for the most extreme examples). The bigger the site and number of pages, the bigger the trap for crawlers to get lost in and less budget assigned to your meaningful content.
 
-## Escaping crawl traps
+Even on Site B (which consists of roughly 6k indexable pages), paginated links on categories led to +1million pages being crawled. 
 
-In our case, Google respected noindex, but nofollow was ineffective in halting crawls (which is what you can see in the Search Console screenshot above). Once the infinite pages dropped from the index, disallowing the offending parameters via robots.txt proved the best solution for stopping spiders in their tracks (_"I've done my bit, goodbye"_).
+Duplicate content hell with a fine dollop of crawl budget wastage on top.
 
-Balance restored, but the root of the problem still isn't solved.
+## Escaping the trap
 
-There's no single fix solution here. If parameterisation _is_ an intended feature on your site then locating relative links leading to endless URL generation should be fairly easy. Site crawl data should also help you get an accurate read on the scale of the issue.
+Turning attention to Site A again, it took a while to figure out the root cause of how these URLs came into existence in the first place. ~~After briefly wondering if we'd been spammed,~~ I eventually discovered a handful of sites in the backlink data that were linking with (what appeared to be) custom tracking parameters, which matched those in the server logs and Search Console coverage reports.
 
-In cases where it _isn't_ utilised, the root cause of parameter related crawl traps won't be so obvious as parameters won't feature in your internal linking. If you've discovered increased crawls to unknown parameter URL variants, it's certainly worth checking your backlinks for sites that may have implemented their own custom tracking.
+Meanwhile on Site B, all infinite URLs included the _?ak_action=reject_mobile_ query string, which belongs to the Jetpack plugin when Mobile Theme is enabled. Jetpack is no longer used by this site and, like Site A, the parameters are some weird legacy stuff that Googlebot has cached.
 
-Whether intended or otherwise, it should be possible to work from the root URL of your problematic parameters (eg. [https://website.com/category/?random_parameter=wtf](https://website.com/category/?random_parameter=wtf "https://website.com/category/?random_parameter=wtf")) to understand where relative links have been erroneously coded in the navigation.
+The exact query strings aren't wholly important, although it's handy to understand where they've come from and be sure you're dealing with parameters that aren't useful in the current version of your site (eg. faceted navigation or other means of changing content). Regardless, any query string will lead to the same outcome.
 
-Hopefully this has proved interesting/useful for someone. Thanks for reading.
+Solving the issue initially took some time. As mentioned before, Google respected noindex, but nofollow was ineffective. When pages eventually dropped from the index, blocking the offending parameters via robots.txt proved the best solution for stopping spiders in their tracks (_*walks off into the sunset*_).
+
+Balance restored, but the crucial bit in all this is understanding where coding bugs exist within your site's architecture, and fixing it.
+
+Hopefully this has proved interesting/useful for someone. Otherwise, feel free to humblebrag if you've discovered infinite page crawls beyond the billions. Thanks for reading.
