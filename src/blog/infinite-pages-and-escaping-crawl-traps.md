@@ -49,7 +49,7 @@ Each new page path is appended to the previous ones, while all 'page' and number
 
 > /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2%2Fpage%2F2page%2F3%2Fpage%2F2%2Fpage%2F297%2F%2Fpage%2F6%2Fpage%2F2%2Fpage%2F2page%2F3%2Fpage%2F2%2Fpage%2F297%2Fpage/297/
 
-As you can expect, duplicate content hell with a fine dollop of crawl wastage on top.
+As you can expect, duplicate content hell with a fine dollop of wasted crawl budget on top.
 
 ## Finding the trap
 
