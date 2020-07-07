@@ -71,7 +71,7 @@ Meanwhile on Site B, all infinite URLs included the _?ak_action=reject_mobile_ q
 
 The exact query strings aren't wholly important, although it's handy to understand where they've come from and be sure you're dealing with parameters that aren't useful in the current version of your site (eg. faceted navigation or other means of changing content). Regardless, any query string will lead to the same outcome.
 
-Solving the issue initially took some time. As mentioned before, Google respected noindex, but nofollow was ineffective. When pages eventually dropped from the index, blocking the offending parameters via robots.txt proved the best solution for stopping spiders in their tracks (**_walks off into the sunset_**).
+Solving the issue initially took some time. As mentioned before, Google respected noindex, but nofollow was ineffective. When pages eventually dropped from the index, blocking the offending parameters via robots.txt proved the best solution for stopping spiders in their tracks (*_walks off into the sunset_*).
 
 Balance restored, but the crucial bit in all this is understanding where coding bugs exist within your site's architecture, and fixing it.
 
