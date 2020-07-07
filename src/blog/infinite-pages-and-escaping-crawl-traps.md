@@ -27,7 +27,7 @@ Googlebot finds an alternative version of a category URL (for the sake of exampl
 
 This parameter isn't used on the site, and doesn't even change the content. The page is exactly the same as its canonical equivalent.
 
-![](/images/example_01.jpg)
+![](/images/example_01b.jpg)
 
 All links on the page reflect the correct URL environments apart from paginated links, which still include _?random_parameter=wtf._ Subsequently, that query is injected into the /page/ path as follows:
 
@@ -35,13 +35,15 @@ All links on the page reflect the correct URL environments apart from paginated 
 
 Googlebot accesses 'page 2', yet the content remains the same.
 
-![](/images/example_02.jpg)
+![](/images/example_02b.jpg)
 
 This is because the consolidation of _?random_parameter=wtf_ and _page_ are effectively treated like a unique parameter ID, rather than a relative link.
 
-And so Googlebot continues to crawl the paginated links. It accesses the next page:
+And so Googlebot continues to spider the paginated links. It accesses the next page:
 
 > /lyfehacks/?random_parameter=wtfpage%2F2%2Fpage/3/
+
+![](/images/example_03-1.jpg)
 
 Each new page path is appended to the previous ones, while all 'page' and number sub-directories that came before are injected into an ever-evolving (and entirely junk) query string.
 
