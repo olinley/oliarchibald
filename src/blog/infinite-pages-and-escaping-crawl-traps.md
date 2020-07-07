@@ -73,7 +73,7 @@ Turning attention to Site A again, it took a while to figure out the root cause 
 
 Meanwhile on Site B, all infinite URLs included the _?ak_action=reject_mobile_ query string, which belongs to the Jetpack plugin when Mobile Theme is enabled. Jetpack is no longer used by this site and, like Site A, the parameters are some weird legacy stuff that Googlebot has cached.
 
-The exact query strings aren't wholly important, although it's handy to understand where they've come from and be sure you're dealing with parameters that aren't useful in the current version of your site (eg. faceted navigation or other means of changing content). Regardless, any query string will lead to the same outcome.
+The exact query strings aren't wholly important. Although it's handy to understand where they've come from, while being sure you're dealing with parameters that aren't useful in the current version of your site (eg. faceted navigation or other means of changing content). Regardless, any query string will lead to the same outcome.
 
 Solving the issue initially took some time. As mentioned before, Google respected noindex, but nofollow was ineffective. When pages eventually dropped from the index, blocking the offending parameters via robots.txt proved the best solution for stopping spiders in their tracks (_walks off into the sunset_).
 
