@@ -1,5 +1,5 @@
 ---
-date: 2020-07-10
+date: 2020-07-05
 title: Infinite pages and escaping crawl traps
 tags:
 - seo
