@@ -11,7 +11,7 @@ description: 'When query strings cause infinite URL paths... on pages that don''
 
 _Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. Rather a niche case study of my own experiences._
 
-For the inaugural post, I want to explore infinite pages and crawl traps. Not a new topic (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides), yet I've dealt with the same specific version of this issue on two occasions, which I think gives me a modicum of authority to shed some helpful advice on the matter.
+For the inaugural post, I'll be exploring infinite pages and crawl traps. Not a new topic (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides), yet I've dealt with the same specific version of this issue on two occasions, which I think gives me a modicum of authority to shed some helpful advice on the matter.
 
 In short, I'll be discussing infinite URL paths occurring on parameterised URLs... on pages that don't incorporate parameterisation.
 
@@ -19,25 +19,21 @@ In short, I'll be discussing infinite URL paths occurring on parameterised URLs.
 
 The two times I ran into crawl traps were the result of code changes, which happened to be introduced during site re-designs. The first instance happened after migrating existing landing pages to a new CMS (Site A). The other occurred after an entire site was migrated to a custom Wordpress theme, although the issue only happened on category pages with pagination (Site B).
 
-On each site, code changes to internal link handling caused query strings to effectively sit within the same folder as the main directory, instead of being treated as its own entity. 
-
-This leads to the unexpected bug, whereby accessing (certain) internal links appends the new URL path to the existing one, rather than directing to the new page. Infinite URL variants are possible, while page content remains the same.
-
 Enough waffle, let me illustrate the scenario...
 
 Googlebot finds an alternative version of a category URL (for the sake of example we'll use _/lyfehacks/_, which was an idea for a parody site I once had that never came to fruition) at the following address:
 
 > /lyfehacks/?random_parameter=wtf
 
-It's exactly the same as the canonical version.
+This parameter isn't used on the site, and doesn't even change the content. The page is exactly the same as the canonical version.
 
 ![](/images/example_01.jpg)
 
-All links on the page reflect the correct URL environments apart from paginated links, which still include _?random_parameter=wtf._ This error injects the query into the /page/ subfolder as such:
+All links on the page reflect the correct URL environments apart from paginated links, which still include _?random_parameter=wtf._ Subsequently, that query is injected into the /page/ path as follows:
 
 > /lyfehacks/?random_parameter=wtfpage/2/
 
-Googlebot accesses 'page 2' but the content remains the same.
+Googlebot accesses 'page 2', yet the content remains the same.
 
 ![](/images/example_02.jpg)
 
@@ -47,7 +43,7 @@ And so Googlebot continues to crawl the paginated links. It accesses the next pa
 
 > /lyfehacks/?random_parameter=wtfpage%2F2%2Fpage/3/
 
-Each previous 'page' and number sub-directory is injected into this ever-evolving (and entirely junk) query string.
+Each new page path is appended to the previous ones, while all 'page' and number sub-directories that came before are injected into an ever-evolving (and entirely junk) query string.
 
 > /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2%2Fpage%2F2page%2F3%2Fpage%2F2%2Fpage%2F297%2F%2Fpage%2F6%2Fpage%2F2%2Fpage%2F2page%2F3%2Fpage%2F2%2Fpage%2F297%2Fpage/297/
 
