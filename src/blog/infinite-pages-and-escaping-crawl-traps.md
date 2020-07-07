@@ -43,7 +43,7 @@ And so Googlebot continues to spider the paginated links. It accesses the next p
 
 > /lyfehacks/?random_parameter=wtfpage%2F2%2Fpage/3/
 
-![](/images/example_03-1.jpg)
+![](/images/example_03-2.jpg)
 
 Each new page path is appended to the previous ones, while all 'page' and number sub-directories that came before are injected into an ever-evolving (and entirely junk) query string.
 
