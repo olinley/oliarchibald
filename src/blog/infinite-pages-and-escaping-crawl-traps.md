@@ -79,7 +79,7 @@ The exact query strings aren't wholly important. Although it's handy to understa
 
 Solving the issue initially took some time. As mentioned before, Google respected noindex, but nofollow was ineffective. When pages eventually dropped from the index, blocking the offending parameters via robots.txt proved the best solution for stopping spiders in their tracks (_walks off into the sunset_).
 
-Balance restored, but the crucial bit in all this is understanding where coding bugs exist within your site's architecture, and fixing it.
+Balance restored, but the crucial bit in all this is understanding where coding bugs exist within your site's architecture, and fixing them.
 
 Hopefully this has proved interesting/useful for someone. Otherwise, feel free to humblebrag if you've discovered infinite page crawls beyond the billions.
 
