@@ -25,7 +25,7 @@ Googlebot finds an alternative version of a category URL (for the sake of exampl
 
 > /lyfehacks/?random_parameter=wtf
 
-This parameter isn't used on the site, and doesn't even change the content. The page is exactly the same as the canonical version.
+This parameter isn't used on the site, and doesn't even change the content. The page is exactly the same as its canonical equivalent.
 
 ![](/images/example_01.jpg)
 
