@@ -3,43 +3,44 @@ date: 2020-07-10
 title: Infinite pages and escaping crawl traps
 tags:
 - seo
+description: ''
 
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
 
-_Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. This is a niche case study of my own experiences._
+_Note: this isn't an article about redirect loops, nor encompassing of all types of crawl traps. Rather a niche case study of my own experiences._
 
-For the inaugural post, I want to explore infinite pages and crawl traps. Not a new topic (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides), yet I've dealt with the same niche version of this issue on two occasions, which gives me a modicum of authority to shed some (hopefully) helpful advice for anyone else going through the same thing.
+For the inaugural post, I want to explore infinite pages and crawl traps. Not a new topic (see [here](https://www.contentkingapp.com/academy/crawler-traps/) and [here](https://www.advancedwebranking.com/blog/avoid-the-seo-spider-trap-how-to-get-out-of-a-sticky-situation/) for some handy in-depth guides), yet I've dealt with the same specific version of this issue on two occasions, which I think gives me a modicum of authority to shed some helpful advice for anyone else going through the same thing.
 
-In short, this post is about infinite URL paths occurring on parameterised URLs... on pages that don't incorporate parameterisation. Confused? Good, then read on.
+In short, I'll be discussing infinite URL paths occurring on parameterised URLs... on pages that don't incorporate parameterisation. Confused? Exactly.
 
 ## Finding a needle in a haystack
 
-The two times I ran into crawl traps were the result of code changes introduced during site re-designs. The first instance happened on a section of a site that migrated to a new CMS (the main focus for this post). The other occurred after an entire site was migrated to a custom Wordpress theme.
+The two times I ran into crawl traps were the result of code changes, which happened to be introduced during site re-designs. The first instance happened after migrating existing landing pages to a new CMS (Site A). The other occurred after an entire site was migrated to a custom Wordpress theme, although the issue only happened on category pages with pagination (Site B).
 
-After going live with updated landing pages on a new headless CMS, changes to the relative linking logic presented unexpected bugs to how parameter URLs were handled within the navigation.
+On each site, code changes to internal link handling caused query strings to effectively sit within the same folder as the main directory, instead of being treated as its own entity. This leads to the unexpected bug, whereby accessing (certain) internal links appends the new URL path to the existing one, rather than directing to the new page. Infinite URL variants are possible, while page content remains the same.
 
-The twist here is that (as alluded to earlier) parameterisation wasn't an intended feature on these pages and therefore completely overlooked in the build/staging process. Neither I or the engineers anticipated the issue cropping up.
+Enough waffle, let me illustrate the scenario.
 
-Attempting to access internal links from certain parameterised URL variants would append the new URL path to the existing one. To illustrate, rather than simply directing to a new page you'd end up with a seemingly infinite generation of URLs like this:
-
-_Root parameter..._
+_Root category with query string that shouldn't exist..._
 
 > /category/?random_parameter=wtf
 
 _navigate to internal link..._
 
-> /category/?random_parameter=wtf/london/
+> /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2/page/2
 
 _navigate to next link..._
 
-> /category/?random_parameter=wtf/london/bristol/
+> /category/?random_parameter=wtf%2Fpage%2F6%2Fpage%2F2/page%2Fpage%2F6%2Fpage%2F2/page/2
 
 _until you end up with..._
 
 > /category/?random_parameter=wtf/london/bristol/birmingham/chelmsford/manchester/exeter/liverpool/newcastle/glasgow/edinburgh/london/bristol/birmingham/chelmsford/cardiff/exeter/liverpool/braintree/glasgow/norwich/
 
 And so on.
+
+Something as simple as a missing trailing slash in the relative linking logic is causing the bug. 
 
 The issue was initially discovered via the server logs where we saw a massive spike in Googlebot activity. 98% of requests were concentrated on infinite, non-existent pages (similar to the example above), which were rooted to a handful of unknown parameters.
 
