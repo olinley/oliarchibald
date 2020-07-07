@@ -5,6 +5,7 @@ tags:
 - seo
 description: 'When query strings cause infinite URL paths... on pages that don''t
   use parameterisation. '
+social_image: "/images/992382641_115bd44a2d_c.jpg"
 
 ---
 ![](/images/992382641_115bd44a2d_c.jpg)
