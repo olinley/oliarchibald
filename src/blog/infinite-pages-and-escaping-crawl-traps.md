@@ -57,7 +57,7 @@ _And this almost certainly wasn't the full picture._
 
 ## Why is this a problem?
 
-The amount of possible 'infinite URL' variations that Googlebot can discover are extrapolated based on the number of categories (other other page types) within your taxonomy (think locations, car models or clothing based categories for the most extreme examples). The bigger the site and number of pages, the bigger the trap for crawlers to get lost in and less budget assigned to your meaningful content.
+The amount of possible 'infinite URL' variations that Googlebot can discover are extrapolated based on the number of categories (other other page types) within your taxonomy (think locations, car models or clothing based categories for the most extreme examples). The bigger the site and number of pages, the bigger the trap for crawlers to get lost in and less budget being assigned to the meaningfuls stuff. 
 
 Even on Site B (which consists of roughly 6k indexable pages), paginated links on categories led to +1million pages being crawled. 
 
@@ -75,4 +75,6 @@ Solving the issue initially took some time. As mentioned before, Google respecte
 
 Balance restored, but the crucial bit in all this is understanding where coding bugs exist within your site's architecture, and fixing it.
 
-Hopefully this has proved interesting/useful for someone. Otherwise, feel free to humblebrag if you've discovered infinite page crawls beyond the billions. Thanks for reading.
+Having spent far too long writing this, an infographic would probably have been the best way to explain all of this. Hopefully this has proved interesting/useful for someone though. Otherwise, feel free to humblebrag if you've discovered infinite page crawls beyond the billions. 
+
+Thanks for reading.
