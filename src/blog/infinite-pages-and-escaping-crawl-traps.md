@@ -75,6 +75,6 @@ Solving the issue initially took some time. As mentioned before, Google respecte
 
 Balance restored, but the crucial bit in all this is understanding where coding bugs exist within your site's architecture, and fixing it.
 
-Hopefully this has proved interesting/useful for someone though. Otherwise, feel free to humblebrag if you've discovered infinite page crawls beyond the billions.
+Hopefully this has proved interesting/useful for someone. Otherwise, feel free to humblebrag if you've discovered infinite page crawls beyond the billions.
 
 Thanks for reading.
