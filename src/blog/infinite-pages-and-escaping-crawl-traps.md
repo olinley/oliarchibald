@@ -68,7 +68,7 @@ _And this almost certainly wasn't the full picture._
 
 The amount of possible 'infinite URL' variations that Googlebot can discover are extrapolated based on the number of categories (other other page types) within your taxonomy (think locations, car models or clothing based categories for the most extreme examples). The bigger the site and number of pages, the bigger the trap for crawlers to get lost in and less budget being assigned to the meaningful stuff.
 
-Even on Site B (which consists of roughly 6k indexable pages), paginated links on categories led to +1million pages being crawled.
+Even on Site B (which consists of roughly 6k indexable pages), paginated links on categories led to +1million pages being crawled (like in the example shown above).
 
 ## Escaping the trap
 
