@@ -26,7 +26,7 @@ fields:
 - type: list
   name: tags
   label: tags
-- name: social_image
+- name: socialImage
   type: file
   config:
     maxSize: 64
