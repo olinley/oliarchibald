@@ -2,6 +2,8 @@
 title: About
 permalink: "/about/index.html"
 layout: layouts/page.njk
+description: I'm a freelance SEO consultant, mainly working with clients in the ecommerce
+  and publishing spaces, but open to most things.
 
 ---
 Hola, I'm ~~Ollie~~, ~~Olly~~, Oli.
