@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "src": "/images/gearslutz-logo-copy.jpg",
+      "alt": "gearslutz-logo"
+    },
+    {
       "src": "/images/cb_logo_with_url-1white_xs.png",
       "alt": "camera-jabber-logo"
     },
