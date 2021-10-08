@@ -10,7 +10,7 @@ Hola, I'm ~~Ollie~~, ~~Olly~~, Oli.
 
 Been in the SEO game for 10 years, having started my career at Builtvisible before going in-house at Deliveroo.
 
-These days I'm a freelance SEO consultant, mainly working with clients in the ecommerce and publishing spaces, but open to most things.
+These days I'm a freelance SEO consultant, largely working with clients in the ecommerce and publishing spaces, but always open to new projects and challenges.
 
 ## What do I actually do?
 
@@ -27,6 +27,7 @@ Am available on a project or retainer basis, with specialist areas including:
 * International SEO (geo-targeting, hreflang and localisation)
 * CMS and domain migrations
 * Backlink analysis and disavow submission
+* Building bespoke reporting dashboards
 * Keyword research
 * Opportunity sizing
 * Competitor and SERP analysis
