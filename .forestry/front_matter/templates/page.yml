@@ -31,7 +31,7 @@ fields:
 - name: client_logos
   type: image_gallery
   config: {}
-  label: Client Logos
+  label: client logos
 pages:
 - src/pages/about.md
 - src/pages/contact.md
