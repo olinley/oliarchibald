@@ -28,6 +28,10 @@ fields:
   config:
     required: false
   label: layout
+- name: client_logos
+  type: image_gallery
+  config: {}
+  label: Client Logos
 pages:
 - src/pages/about.md
 - src/pages/contact.md
