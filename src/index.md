@@ -14,4 +14,4 @@ Areas of expertise are largely focused within all technical aspects of SEO, as w
 
 ## My clients
 
-![](/images/the-bottle-club-logo-xs.png)
+![](/images/the-bottle-club-logo-xs.png)![](/images/gearspace-logo-xs.png)
