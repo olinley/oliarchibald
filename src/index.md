@@ -13,5 +13,3 @@ I'm available for freelance support, either for one-off projects, collaborations
 Areas of expertise are largely focused within all technical aspects of SEO, as well as on-site content and UX. The majority of my client base is within the ecommerce and publishing spaces, although I'm generally open to all interesting/exciting opportunities.
 
 ## My clients
-
-![The Bottle Club Logo](/images/the-bottle-club-logo-xs.png "The Bottle Club Logo")![](/images/gearspace-logo-xs.png)
